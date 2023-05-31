@@ -5,26 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requests</title>
+    <title>Request</title>
     <link rel="website icon" type="png" href="tranzipper-logo.png">
     <link href="css/tranzipper.css" rel="stylesheet" type="text/css">
     <style>
 
         .trip-info {
             margin-left: 10px;
-        
             border-radius: 7px;
-            padding-left: 10px;
+            padding-left: 5px;
             padding-top: 5px;
             display: inline-block;
-            width: 360px;
+            width: 310px;
         }
 
 
 
         .head-fees {
             display: inline-block;
-            margin-left: 20px;
+            margin-right: 15px;
         }
 
         .head-cost {
@@ -38,8 +37,8 @@
             display: block;
             margin-right: 50px;
             margin-top: 0;
-            color: #c4c3ca;
-            ;
+            color: #fff;
+            margin-bottom: 0px;
         }
 
         .trip-tatal-cost {
@@ -49,7 +48,8 @@
 
 
         hr {
-            border-color: rgb(3, 65, 32);
+            border-color: #a7a7a95d;
+            border-width: 0.4px;
         }
 
         .total {
@@ -68,35 +68,32 @@
         }
 
         .space-text {
-            padding-left: 15px;
+            padding-left: 20px;
         }
 
         .paid-text{
-            padding-left: 20px;
-            margin-right: 15px;
-            color: green;
+            display: block;
+            color: rgb(204, 253, 204);
             font-style: italic;
         }
 
         .canceled-text {
-            padding-left: 20px;
-            margin-right: 15px;
-            color: red;
+            display: block;
+            color: rgb(248, 147, 147);
             font-style: italic;
         }
 
 
         .card {
-            width: 335px;
-            height: 40px;
+            width: 310px;
             transition: all .5s;
              overflow: hidden;
             border-radius: 2px;
-            margin: 0 auto 20px;
+            margin: 0 auto 2px;
+            background: rgb(2, 40, 20);
         }
 
         .card:hover {
-            height: 190px;
             background: rgb(2, 40, 20);
         }
 
@@ -104,9 +101,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: #c4c3ca;
+            background: #687d6a;
             cursor: pointer;
+            color: #ffffff;
         }
+
+        .card .header:active {
+            background: #00600a;
+            color: #fff;
+        }
+
 
 
         .card .header .title {
@@ -126,32 +130,32 @@
         .card .content {
             display: block;
             text-align: justify;
-            color: #c4c3ca;
+            color: #fff;
             margin: 0 18px;
 
 
             margin-left: 10px;
             background-color: rgba(0, 0, 0, 0.10);
-            padding-left: 10px;
             padding-top: 5px;
             display: inline-block;
-            width: 360px;
+            width: 310px;
 
             box-shadow: 2px 2px 10px -2px rgba(0, 0, 0, 0.35);
-            color: #c4c3ca;
-            font-size: 9px;
+            color: #fff;
+            font-size: 10px;
 
 
         }
 
-        .head-cost, .head-fees {
-            text-align: center;
-        }
         .main-page {
             font-size: 14px;
-            width: 335px;
+            width: 310px;
             margin: 10px auto;
             text-align: left;
+        }
+        .request-head{
+            color: #939396;
+            
         }
     </style>
 </head>
@@ -160,7 +164,7 @@
     <div class="page">
 
         <div class="main-page">
-            <div >
+            <div class="request-head">
                 TODAY
             </div>
 
@@ -174,51 +178,49 @@
                     </div>
                     <p class="title" style="margin-top: 10px;">
                         Rasaq
-                        <span class="space-text">1</span>
                         <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        <span class="space-text">&#8358;2,500</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
+                    
                     <div class="head-fees">
                         <p class="topic">
                             Trip
                         </p>
                         <p class="trip-fees">
-                            Itamaga - Agric
+                            Itamaga &dash; Agric
                         </p>
                     </div>
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;2,400
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;100
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #22381
                         </p>
                     </div>
                     <hr>
                     Calling expires in 30 minutes after acceptance of request. 
-                    
                 </div>
                 <div>
                     <div class="call">
@@ -228,8 +230,12 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
+                    <p class="total-cost">
+                        &#8358;2,500
+                    </p>
                 </div>
             </div>
+            <hr>
 
 
             <div class="card">
@@ -238,23 +244,15 @@
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
+                        Samson
                         <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        <span class="space-text">&#8358;2,600</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
+                   
                     <div class="head-fees">
                         <p class="topic">
                             Trip
@@ -266,19 +264,26 @@
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;2,400
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;200
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #32481
                         </p>
                     </div>
                     <hr>
@@ -292,140 +297,12 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
-                </div>
-            </div>
-
-
-
-
-
-            <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="canceled-text">Canceled!</span>                    </p>
-                </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
-            </div>
-            
-
-
-
-            <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
+                    <p class="total-cost">
+                        &#8358;2,600
                     </p>
                 </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
             </div>
+            <hr>
 
 
 
@@ -436,47 +313,45 @@
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
+                        Adekunle
+                        <span class="space-text"> Ikorodu Garage</span>
+                        <span class="space-text">&#8358;1,200</span>
+                        <span class="canceled-text">Rejected</span>                    
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
                     <div class="head-fees">
                         <p class="topic">
                             Trip
                         </p>
                         <p class="trip-fees">
-                            Itamaga - Agric
+                            Itamaga - Ikorodu Garage
                         </p>
                     </div>
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;1,200
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;0
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Drver ID
+                        </p>
+                        <p class="trip-fees">
+                            #57932
                         </p>
                     </div>
                     <hr>
@@ -490,8 +365,12 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
+                    <p class="total-cost">
+                        &#8358;1,200
+                    </p>
                 </div>
             </div>
+            <hr>
 
 
 
@@ -501,47 +380,45 @@
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        Williams
+                        <span class="space-text"> Benson</span>
+                        <span class="space-text">&#8358;1,800</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
                     <div class="head-fees">
                         <p class="topic">
                             Trip
                         </p>
                         <p class="trip-fees">
-                            Itamaga - Agric
+                            Itamaga - Benson
                         </p>
                     </div>
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;1,800
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;0
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #87546
                         </p>
                     </div>
                     <hr>
@@ -555,36 +432,30 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
+                    <p class="total-cost">
+                        &#8358;1,800
+                    </p>
                 </div>
             </div>
+            <hr>
 
 
 
-
-
-                        <div class="card">
+            <div class="card">
                 <div class="header">
                     <div class="img-box">
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
+                        Damilola
                         <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        <span class="space-text">&#8358;2,700</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
+                    
                     <div class="head-fees">
                         <p class="topic">
                             Trip
@@ -596,19 +467,26 @@
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;2,400
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;300
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #75375
                         </p>
                     </div>
                     <hr>
@@ -622,39 +500,28 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
+                    <p class="total-cost">
+                        &#8358;2,700
+                    </p>
                 </div>
             </div>
+            <hr>
 
 
-
-
-
-
-
-
-                        <div class="card">
+            <div class="card">
                 <div class="header">
                     <div class="img-box">
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
+                        James 
                         <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        <span class="space-text">&#8358;2,400</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
                     <div class="head-fees">
                         <p class="topic">
                             Trip
@@ -666,19 +533,26 @@
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;2,400
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;0
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #36549
                         </p>
                     </div>
                     <hr>
@@ -692,11 +566,15 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
+                    <p class="total-cost">
+                        &#8358;2,400
+                    </p>
                 </div>
             </div>
+            <hr>
 
 
-            <div>
+            <div class="request-head">
                 YESTERDAY
             </div>
 
@@ -706,23 +584,14 @@
 
                     </div>
                     <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
+                        Felix 
                         <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
+                        <span class="space-text">&#8358;2,700</span>
                         <span class="paid-text">Accepted</span>
                     </p>
                 </div>
 
                 <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
                     <div class="head-fees">
                         <p class="topic">
                             Trip
@@ -734,19 +603,26 @@
 
                     <div class="head-fees">
                         <p class="topic">
-                            Driver ID
+                            Cost
                         </p>
                         <p class="trip-cost">
-                            #22381
+                            &#8358;2,400
                         </p>
                     </div>
-                    
                     <div class="head-fees">
                         <p class="topic">
-                            Passenger
+                            Bag Fee
                         </p>
                         <p class="trip-fees">
-                            1
+                            &#8358;300
+                        </p>
+                    </div>
+                    <div class="head-fees">
+                        <p class="topic">
+                            Driver ID
+                        </p>
+                        <p class="trip-fees">
+                            #37650
                         </p>
                     </div>
                     <hr>
@@ -760,277 +636,12 @@
                         <img class="accept" src="decline-request.png" alt="Call">
                     </div>
                     
-                </div>
-            </div>
-
-
-
-
-
-                        <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
+                    <p class="total-cost">
+                        &#8358;2,700
                     </p>
                 </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
             </div>
-
-
-
-
-
-
-                        <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
-                    </p>
-                </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
-            </div>
-
-
-
-
-            <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
-                    </p>
-                </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
-            </div>
-
-
-
-
-
-                        <div class="card">
-                <div class="header">
-                    <div class="img-box">
-
-                    </div>
-                    <p class="title" style="margin-top: 10px;">
-                        Rasaq
-                        <span class="space-text">1</span>
-                        <span class="space-text"> Agric</span>
-                        <span class="space-text">&#8358;300</span>
-                        <span class="paid-text">Accepted</span>
-                    </p>
-                </div>
-
-                <div class="content">
-                    <div class="head-cost">
-                        <p class="topic">
-                            Driver
-                        </p>
-                        <p class="trip-cost">
-                            Rasaq Sodiq
-                        </p>
-                    </div>
-                    <div class="head-fees">
-                        <p class="topic">
-                            Trip
-                        </p>
-                        <p class="trip-fees">
-                            Itamaga - Agric
-                        </p>
-                    </div>
-
-                    <div class="head-fees">
-                        <p class="topic">
-                            Driver ID
-                        </p>
-                        <p class="trip-cost">
-                            #22381
-                        </p>
-                    </div>
-                    
-                    <div class="head-fees">
-                        <p class="topic">
-                            Passenger
-                        </p>
-                        <p class="trip-fees">
-                            1
-                        </p>
-                    </div>
-                    <hr>
-                    Calling expires in 30 minutes after acceptance of request. 
-                </div>
-                <div>
-                    <div class="call">
-                        <img class="accept" src="call-user.png" alt="Call">
-                    </div>
-                    <div class="call">
-                        <img class="accept" src="decline-request.png" alt="Call">
-                    </div>
-                    
-                </div>
-            </div>
-
+            <hr>
 
 
 
@@ -1053,53 +664,52 @@
 
 
 
-
-<!-- partial:index.partial.html -->
  <!-- partial:index.partial.html -->
- <nav class="navigation-tab">
-    <a href="homepage.html">
-        <div class="navigation-tab-item active">
-            <span class="navigation-tab___icon">
-                <img class="img-nav" src="home.png" alt="Home" style="margin: 0 auto;">
-            </span>
-            <span class="navigation-tab___icon">
-                <span class="navigation-tab_txt">Home</span>
-        </div>
-    </a>
+    <!-- partial:index.partial.html -->
+    <nav class="navigation-tab">
+        <a href="driver-homepage.html">
+            <div class="navigation-tab-item active">
+                <span class="navigation-tab___icon">
+                    <img class="img-nav" src="home.png" alt="Home" style="margin: 0 auto;">
+                </span>
+                <span class="navigation-tab___icon">
+                    <span class="navigation-tab_txt">Home</span>
+            </div>
+        </a>
 
-    <a href="passenger-requests.html">
-        <div class="navigation-tab-item active">
-            <span class="navigation-tab___icon">
-                <img class="img-nav" src="phone-call.png" alt="Requests">
-            </span>
-            <span class="navigation-tab___icon">
-                <span class="navigation-tab_txt">Requests</span>
-        </div>
-    </a>
+        <a href="requests.html">
+            <div class="navigation-tab-item active">
+                <span class="navigation-tab___icon">
+                    <img class="img-nav" src="phone-call.png" alt="Requests">
+                </span>
+                <span class="navigation-tab___icon">
+                    <span class="navigation-tab_txt">Requests</span>
+            </div>
+        </a>
 
-    <a href="wallet.html">
-        <div class="navigation-tab-item active">
-            <span class="navigation-tab___icon">
-                <img class="img-nav" src="suitcase.png" alt="Wallet">
-            </span>
-            <span class="navigation-tab___icon">
-                <span class="navigation-tab_txt">Wallet</span>
-        </div>
-    </a>
+        <a href="drivers-wallet.html">
+            <div class="navigation-tab-item active">
+                <span class="navigation-tab___icon">
+                    <img class="img-nav" src="suitcase.png" alt="Wallet">
+                </span>
+                <span class="navigation-tab___icon">
+                    <span class="navigation-tab_txt">Wallet</span>
+            </div>
+        </a>
 
-    <a href="your-profile.html">
-        <div class="navigation-tab-item active">
-            <span class="navigation-tab___icon">
-                <img class="img-nav" src="user.png" alt="Profile">
-            </span>
-            <span class="navigation-tab___icon">
-                <span class="navigation-tab_txt">Account</span>
-        </div>
-    </a>
-    <div class="navigation-tab-overlay"></div>
-</nav>
-<!-- partial -->
-</span>
+        <a href="rider-profile.html">
+            <div class="navigation-tab-item active">
+                <span class="navigation-tab___icon">
+                    <img class="img-nav" src="user.png" alt="Profile">
+                </span>
+                <span class="navigation-tab___icon">
+                    <span class="navigation-tab_txt">Account</span>
+            </div>
+        </a>
+        <div class="navigation-tab-overlay"></div>
+    </nav>
+    <!-- partial -->
+    </span>
 
 
 
